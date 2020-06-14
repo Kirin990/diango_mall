@@ -1,0 +1,1483 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>product classification</title>
+{% endblock %}
+{% block container %}
+    <!--top search-->
+    <!--main body-->
+    <div class="wy-content">
+      <div class="category-top">
+        <header class="weui-header">
+          <div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+              <div class="weui-search-bar__box">
+                <i class="weui-icon-search"></i>
+                <input
+                  type="search"
+                  class="weui-search-bar__input"
+                  id="searchInput"
+                  placeholder="Search for the product you want"
+                  required
+                />
+                <a
+                  href="javascript:"
+                  class="weui-icon-clear"
+                  id="searchClear"
+                ></a>
+              </div>
+              <label
+                class="weui-search-bar__label"
+                id="searchText"
+                style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);"
+              >
+                <i class="weui-icon-search"></i>
+                <span>Search for the product you want</span>
+              </label>
+            </form>
+            <a
+              href="javascript:"
+              class="weui-search-bar__cancel-btn"
+              id="searchCancel"
+              >cancel</a
+            >
+          </div>
+        </header>
+      </div>
+      <aside>
+        <div class="menu-left scrollbar-none" id="sidebar">
+          <ul>
+            <li class="active">eye</li>
+            <li>cheek</li>
+            <li>face</li>
+            <li>lip</li>
+            <li>skin</li>
+          </ul>
+        </div>
+      </aside>
+      <section class="menu-right padding-all j-content">
+        <h5>mascara</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/mascara1.jpg" /><span
+              >Mascara 01 Black</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/mascara2.jpg" /><span
+              >Mascara 02 Black</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/mascara3.jpg" /><span
+              > Mascara Black 03</span
+            >
+          </li>
+        </ul>
+        <h5>eyeliner</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eyeliner1.jpg" /><span
+              >Liquid Black</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eyeliner2.jpg" /><span
+              >Eye pencil</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eyeliner3.jpg" /><span
+              >Matte black</span
+            >
+          </li>
+        </ul>
+          <h5>eyebrow makeup</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eyebrow_makeup1.jpg" /><span
+              >Powder Pencil</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eyebrow_makeup2.jpg" /><span
+              >Eyebrow Cake Powder</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eyebrow_makeup3.jpg" /><span
+              >Eye Brow Gel Clear</span
+            >
+          </li>
+        </ul>
+           <h5>eye shadow</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow1.jpg" /><span
+              >Warm Neutrals</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow2.jpg" /><span
+              >Liquid Eyeshadow Set</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow3.jpg" /><span
+              >Naked Honey Palette</span
+            >
+          </li>
+        </ul>
+           <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow1.jpg" /><span
+              >Warm Neutrals</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow2.jpg" /><span
+              >Liquid Eyeshadow Set</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow3.jpg" /><span
+              >Naked Honey Palette</span
+            >
+          </li>
+        </ul>
+           <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow1.jpg" /><span
+              >Warm Neutrals</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow2.jpg" /><span
+              >Liquid Eyeshadow Set</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow3.jpg" /><span
+              >Naked Honey Palette</span
+            >
+          </li>
+        </ul>
+           <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow1.jpg" /><span
+              >Warm Neutrals</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow2.jpg" /><span
+              >Liquid Eyeshadow Set</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_shadow3.jpg" /><span
+              >Naked Honey Palette</span
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="menu-right padding-all j-content" style="display:none">
+        <h5>concealer</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/concealer1.jpg" /><span
+              >Liquid Concealer</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/concealer2.jpg" /><span
+              >Longwear Concealer</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/concealer3.jpg" /><span
+              >CC Serum 30ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/concealer4.jpg" /><span
+              >Stila One Step Correct (30ml)</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/concealer5.jpg" /><span
+              >Stila One Step Correct (30ml)</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/concealer6.jpg" /><span
+              >Eye Primer 6ml</span
+            >
+          </li>
+        </ul>
+        <h5>blush</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/blush1.jpg" /><span
+              >benefit Hoola 8g</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/blush2.jpg" /><span
+              >Liquid Blush - Orgasm</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/blush3.jpg" /><span
+              >Maxi Blusher (Various Shades)</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/blush4.jpg" /><span
+              >Fluid Blusher 15ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/blush5.jpg" /><span
+              >Sheertone Blush (Various Shades)</span
+            >
+          </li>
+            <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/blush6.jpg" /><span
+              >Cosmetics Blush (Various Shades)</span
+            >
+          </li>
+        </ul>
+         <h5>highlighter</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/highlighter1.jpg" /><span
+              >Highlight & Contour - Light</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/highlighter2.jpg" /><span
+              >Tinted Lip & Cheek Stain 10ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/highlighter3.jpg" /><span
+              >Liquid Highlighting Drops - Champagne 15ml</span
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="menu-right padding-all j-content" style="display:none">
+        <h5>foundation</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/foundation1.jpg" /><span
+              >Fix Fluid SPF 15 Foundation</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/foundation2.jpg" /><span
+              >Poreless Foundation 30ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/foundation4.jpg" /><span
+              >Freshwear Liquid Foundation</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/foundation3.jpg" /><span
+              >Cosmetics Foundation Pump</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/foundation5.jpg" /><span
+              >24hr Freshwear Liquid Foundation</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/foundation6.jpg" /><span
+              >Liberator Serum Foundation 30ml </span
+            >
+          </li>
+        </ul>
+        <h5>primer</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/primer1.jpg" /><span
+              >The Original Photo Primer 30ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/primer2.jpg" /><span
+              >Hydrating Jelly Primer 40g</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/primer3.jpg" /><span
+              >Silicone Primer 30ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/primer4.jpg" /><span
+              >Enriched Face Base 50ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/primer5.jpg" /><span
+              >Spreadability Fluid Primer 30ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/primer6.jpg" /><span
+              > Eyelash Enhancing Serum</span
+            >
+          </li>
+        </ul>
+           <h5>powder</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/powder1.jpg" /><span
+              >Powder Brush</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/powder2.jpg" /><span
+              >Brightening Powder</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/powder3.jpg" /><span
+              >Powder Sponge</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/powder4.jpg" /><span
+              >Bronzing Powder</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/powder5.jpg" /><span
+              >Bronzing Powder</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/powder6.jpg" /><span
+              >Stay Matte Pressed Powder </span
+            >
+          </li>
+        </ul>
+          <h5>spray</h5>
+          <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/spray1.jpg" /><span
+              >Heat Protect Spray</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/spray2.jpg" /><span
+              >Wave Spray Luxe 50ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/spray3.jpg" /><span
+              >Clarifying Body Spray 130ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/spray4.jpg" /><span
+              >Fluidissime Spray 150ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/spray5.jpg" /><span
+              >Supernatural Spray 200ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/spray6.jpg" /><span
+              >Deep Sleep Pillow Spray (75ml)</span
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="menu-right padding-all j-content" style="display:none">
+        <h5>lipstick</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lipstick10.jpg" /><span
+              >Seductive Sheers Lipstick 3.5g</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lipstick11.jpg" /><span
+              >Nude Lipstick Trio</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lipstick12.jpg" /><span
+              >Lip Plump and Colour 2g</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lipstick13.jpg" /><span
+              >Reve De Miel Lip Stick</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lipstick14.jpg" /><span
+              >Matte Lipstick 1.8g</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lipstick15.jpg" /><span
+              >Satin - VIVA GLAM II</span
+            >
+          </li>
+        </ul>
+        <h5>lip gloss</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_gloss13.jpg" /><span
+              >Professional Makeup Butter Gloss</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_gloss14.jpg" /><span
+              >Original Nipple Balm for Lips</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_gloss15.jpg" /><span
+              >SPF30 Balm - Perfect Nude 12.5g</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_gloss16.jpg" /><span
+              >Peach Pink Balm 10ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_gloss17.jpg" /><span
+              >Original Balm 10ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_gloss17.jpg" /><span
+              >Lip Gloss (Various Shades)</span
+            >
+          </li>
+        </ul>
+           <h5>lip liner</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_liner7.jpg" /><span
+              >24/7 Lip Pencil (Various Shades)</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_liner8.jpg" /><span
+              >Lip Pencil (Various Shades)</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_liner9.jpg" /><span
+              >Gel Lip Liner 0.2g</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_liner10.jpg" /><span
+              >Suede Matte Lip Liner</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_liner11.jpg" /><span
+              >Shaping Lip Liner</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/lip_liner12.jpg" /><span
+              >1000 Kisses Lip Liner 1.2g</span
+            >
+          </li>
+        </ul>
+      </section>
+      <section class="menu-right padding-all j-content" style="display:none">
+        <h5>eye cream</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_cream1.jpg" /><span
+              >Renew Eye Cream (15ml)</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_cream2.jpg" /><span
+              >Eye Therapy Under Eye Mask</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_cream3.jpg" /><span
+              >DetoxifEYE Eye Patches</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_cream4.jpg" /><span
+              >Eye Repair Cream 14ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_cream5.jpg" /><span
+              >Hydrating Brightening Eye Sheet Mask 6g</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/eye_cream6.jpg" /><span
+              >Eyelash Enhancing Serum</span
+            >
+          </li>
+        </ul>
+        <h5>serum</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/serum1.jpg" /><span
+              >Ceramide Capsules Advanced (90 Capsules)</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/serum2.jpg" /><span
+              >Chantecaille Vital Essence - 50ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/serum3.jpg" /><span
+              >100% Plant-Derived Squalane 30ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/serum4.jpg" /><span
+              >10% Agireline Solution 30ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/serum5.jpg" /><span
+              >100% Plant-Derived Hemi-Squalane 30ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/serum6.jpg" /><span
+              >Buffet Supersize Serum 60ml</span
+            >
+          </li>
+        </ul>
+       <h5>cleanser</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/cleanser3.jpg" /><span
+              >Cleansing Balm 125ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/cleanser4.jpg" /><span
+              >Light Cleansing Gel 100ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/cleanser5.jpg" /><span
+              >Gentle Cleanser 200ml</span
+            >
+          </li>
+        </ul>
+       <h5>toner</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/toner1.jpg" /><span
+              >Glow Tonic 250ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/toner2.jpg" /><span
+              >Vitamin-C Tonic 100ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/toner3.jpg" /><span
+              >Clarifying Lotion 200ml</span
+            >
+          </li>
+        </ul>
+      <h5>mask</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/mask1.jpg" /><span
+              >Face Mask 50ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/mask2.jpg" /><span
+              >Ultramoor Mud Mask (50ml)</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/mask3.jpg" /><span
+              >Oxygen-Glow Mask 75mll</span
+            >
+          </li>
+        </ul>
+            <h5>scrub</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/scrub1.jpg" /><span
+              >Spa Body Scrub 50ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/scrub2.jpg" /><span
+              >Soothing Scrub 250ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/scrub3.jpg" /><span
+              >Gentle Exfoliating Scrub 75ml</span
+            >
+          </li>
+        </ul>
+          <h5>moisturizer</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/moisturizer1.jpg" /><span
+              >Black Castor Oil Strengthen</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/moisturizer2.jpg" /><span
+              >Restorative Conditioner 379ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/moisturizer3.jpg" /><span
+              >Yogurt Hydrate & Repair Shampoo 384ml</span
+            >
+          </li>
+        </ul>
+       <h5>blam</h5>
+        <ul>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/blam1.jpg" /><span
+              >Soothing Repairing Balm 40ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/blam2.jpg" /><span
+              >Restorative Conditioner 379ml</span
+            >
+          </li>
+          <li class="w-3">
+            <a href="product_list.html"></a> <img src="/static/upload/blam3.jpg" /><span
+              >Intense Repair Moisturizing Cream</span
+            >
+          </li>
+        </ul>
+      </section>
+{#      <section class="menu-right padding-all j-content" style="display:none">#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#      </section>#}
+{#      <section class="menu-right padding-all j-content" style="display:none">#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{##}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#      </section>#}
+{#      <section class="menu-right padding-all j-content" style="display:none">#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#      </section>#}
+{#      <section class="menu-right padding-all j-content" style="display:none">#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#      </section>#}
+{#      <section class="menu-right padding-all j-content" style="display:none">#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#      </section>#}
+{#      <section class="menu-right padding-all j-content" style="display:none">#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#      </section>#}
+{#      <section class="menu-right padding-all j-content" style="display:none">#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#        <h5>服装服饰</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#      </section>#}
+{#      <section class="menu-right padding-all j-content" style="display:none">#}
+{#        <h5>旅游生活</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#        <h5>旅游生活</h5>#}
+{#        <ul>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#          <li class="w-3">#}
+{#            <a href="product_list.html"></a> <img src="upload/pro3.jpg" /><span#}
+{#              >酒水食品</span#}
+{#            >#}
+{#          </li>#}
+{#        </ul>#}
+{#      </section>#}
+{#    </div>#}
+{% endblock %}
+{% block footer %}
+    <script type="text/javascript">
+      $(function($) {
+        $('#sidebar ul li').click(function() {
+          $(this)
+            .addClass('active')
+            .siblings('li')
+            .removeClass('active');
+          var index = $(this).index();
+          $('.j-content')
+            .eq(index)
+            .show()
+            .siblings('.j-content')
+            .hide();
+        });
+      });
+    </script>
+{% endblock %}

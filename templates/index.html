@@ -1,0 +1,277 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Welcome to cosmetic ecommerce</title>
+{% endblock %}
+{% block container %}
+    <header class="wy-header">
+        <div class="wy-header-title">cosmetic ecommerce</div>
+    </header>
+    <!--top search-->
+    <header class="weui-header">
+        <div class="weui-search-bar" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input
+                            type="search"
+                            class="weui-search-bar__input"
+                            id="searchInput"
+                            placeholder="Search for the product you want"
+                            required
+                    />
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label
+                        class="weui-search-bar__label"
+                        id="searchText"
+                        style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);"
+                >
+                    <i class="weui-icon-search"></i>
+                    <span>Search for the product you want</span>
+                </label>
+            </form>
+            <a
+                    href="javascript:"
+                    class="weui-search-bar__cancel-btn"
+                    id="searchCancel"
+            >cancel</a
+            >
+        </div>
+    </header>
+    {% if user.is_authenticated %}
+        <h3>Welcome， {{ user.username }}</h3>
+    {% else %}
+        Welcome， <a href="{% url 'accounts:user_login' %}">sign in please</a>
+    {% endif %}
+    <!--main body-->
+    <div class="weui-content">
+        <!--top slider-->
+        <div class="swiper-container swiper-banner">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="../mall/templates/pro_info.html"><img src="/medias/upload/slider1.jpg"/></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="../mall/templates/pro_info.html"><img src="/medias/upload/slider2.jpg"/></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="../mall/templates/pro_info.html"><img src="/medias/upload/slider3.jpg"/></a>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        {#        <div class="swiper-container swiper-banner">#}
+        {#            <div class="swiper-wrapper">#}
+        {#                {% for slider in slider_list %}#}
+        {#                    <div class="swiper-slide">#}
+        {#                        <a href="{{ slider.target_url }}">#}
+        {#                            <img src="{{ slider.img }}"/>#}
+        {#                        </a>#}
+        {#                    </div>#}
+        {#                {% endfor %}#}
+        {#            </div>#}
+        {#            <div class="swiper-pagination"></div>#}
+        {#        </div>#}
+        <!--image classification-->
+        <div class="weui-flex wy-iconlist-box">
+            <div class="weui-flex__item">
+                <a href="{% url 'mall:product_list' %}?tag=jxtj" class="wy-links-iconlist"
+                >
+                    <div class="img"><img src="/static/images/icon-link1.png"/></div>
+                    <p>Special Recommendation</p></a
+                >
+            </div>
+            <div class="weui-flex__item">
+                <a href="{% url 'mall:product_list' %}?cls=jszc" class="wy-links-iconlist"
+                >
+                    <div class="img"><img src="/static/images/lipstick1.jpg"/></div>
+                    <p>Lipstick Session</p></a
+                >
+            </div>
+            <div class="weui-flex__item">
+                <a href="all_orders.html" class="wy-links-iconlist"
+                >
+                    <div class="img"><img src="/static/images/icon-link3.png"/></div>
+                    <p>Order Management</p></a
+                >
+            </div>
+            <div class="weui-flex__item">
+                <a href="javascript:alert('Under construction, do please expect')" class="wy-links-iconlist"
+                >
+                    <div class="img"><img src="/static/images/icon-link4.png"/></div>
+                    <p>Join us</p></a
+                >
+            </div>
+        </div>
+        <!--news transformation-->
+        <div class="wy-ind-news">
+            <i class="news-icon-laba"></i>
+            <div class="swiper-container swiper-news">
+                <div class="swiper-wrapper">
+                    {% for item in news_list %}
+                        <div class="swiper-slide">
+                            <a href="{% url 'system:news_detail' item.pk %}"
+                            >{{ item.title }}</a
+                            >
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+            <a href="{% url 'system:news_list' %}" class="newsmore"
+            ><i class="news-icon-more"></i
+            ></a>
+        </div>
+        <!--special recommendation-->
+        <div class="wy-Module">
+            <div class="wy-Module-tit"><span>Sepecial Recommendation</span></div>
+            <div class="wy-Module-con">
+                <div
+                        class="swiper-container swiper-jingxuan"
+                        style="padding-top:34px;"
+                >
+                    <div class="swiper-wrapper">
+                        {% for item in jx_list %}
+                            <div class="swiper-slide">
+                                <a href="{% url 'mall:product_detail' item.uid %}">
+                                    <img src="{{ item.img.url }}"/>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination jingxuan-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!--Lipstick Session-->
+        <div class="wy-Module">
+            <div class="wy-Module-tit"><span>Lipstick Session</span></div>
+            <div class="wy-Module-con">
+                <div
+                        class="swiper-container swiper-jiushui"
+                        style="padding-top:34px;"
+                >
+                    <div class="swiper-wrapper">
+                        {% for item in js_list %}
+                            <div class="swiper-slide">
+                                <a href="{% url 'mall:product_detail' item.uid %}">
+                                    <img src="{{ item.img.url }}"/>
+                                </a>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination jingxuan-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <!--guess you like-->
+        <div class="wy-Module">
+            <div class="wy-Module-tit-line"><span>guess you like</span></div>
+            <div class="wy-Module-con">
+                <ul class="wy-pro-list clear">
+                    <li>
+                        <a href="../mall/templates/pro_info.html">
+                            <div class="proimg"><img src="/static/upload/lipstick11.jpg"/></div>
+                            <div class="protxt">
+                                <div class="name">
+                                    Seductive Sheers Lipstick 3.5g
+                                </div>
+                                <div class="wy-pro-pri">$<span>22.00</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../mall/templates/pro_info.html">
+                            <div class="proimg"><img src="/static/upload/lipstick13.jpg"/></div>
+                            <div class="protxt">
+                                <div class="name">
+                                    Reve De Miel Lip Stick (4g Stick)
+                                </div>
+                                <div class="wy-pro-pri">$<span>6.50</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../mall/templates/pro_info.html">
+                            <div class="proimg"><img src="/static/upload/lip_liner11.jpg"/></div>
+                            <div class="protxt">
+                                <div class="name">
+                                    Decay 24/7 Lip Pencil (Various Shades)
+                                </div>
+                                <div class="wy-pro-pri">$<span>11.20</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../mall/templates/pro_info.html">
+                            <div class="proimg"><img src="/static/upload/lip_liner12.jpg"/></div>
+                            <div class="protxt">
+                                <div class="name">
+                                    Lip Pencil (Various Shades)
+                                </div>
+                                <div class="wy-pro-pri">$<span>15.00</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../mall/templates/pro_info.html">
+                            <div class="proimg"><img src="/static/upload/powder1.jpg"/></div>
+                            <div class="protxt">
+                                <div class="name">
+                                    Real Techniques Powder Brush
+                                </div>
+                                <div class="wy-pro-pri">$<span>10.99</span></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../mall/templates/pro_info.html">
+                            <div class="proimg"><img src="/static/upload/primer4.jpg"/></div>
+                            <div class="protxt">
+                                <div class="name">
+                                    Bobbi Brown Vitamin Enriched Face Base 50ml
+                                </div>
+                                <div class="wy-pro-pri">$<span>44.50</span></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="morelinks"><a href="../mall/templates/product_list.html">search more >></a></div>
+            </div>
+        </div>
+    </div>
+    {#  包含底部的html模块 #}
+    {% include 'footer.html' with tab='index' %}
+{% endblock %}
+{% block footer %}
+    <script src="/static/js/swiper.js"></script>
+    <script>
+        $('.swiper-banner').swiper({
+            loop: true,
+            autoplay: 3000
+        });
+        $('.swiper-news').swiper({
+            loop: true,
+            direction: 'vertical',
+            paginationHide: true,
+            autoplay: 30000
+        });
+        $('.swiper-jingxuan').swiper({
+            pagination: '.swiper-pagination',
+            loop: true,
+            paginationType: 'fraction',
+            slidesPerView: 3,
+            paginationClickable: true,
+            spaceBetween: 2
+        });
+        $('.swiper-jiushui').swiper({
+            pagination: '.swiper-pagination',
+            paginationType: 'fraction',
+            loop: true,
+            slidesPerView: 3,
+            slidesPerColumn: 2,
+            paginationClickable: true,
+            spaceBetween: 2
+        });
+    </script>
+{% endblock %}

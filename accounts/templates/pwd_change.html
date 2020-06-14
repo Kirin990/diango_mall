@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>change Password</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/static/lib/weui.min.css" />
+    <link rel="stylesheet" href="/static/css/jquery-weui.css" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+  </head>
+  <body ontouchstart class="container">
+    <!--main body-->
+    <header class="wy-header">
+      <div class="wy-header-icon-back"><span></span></div>
+      <div class="wy-header-title">change Password</div>
+    </header>
+    <div class="weui-content">
+      <div class="weui-cells weui-cells_form wy-address-edit">
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">new password</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input
+              class="weui-input"
+              type="number"
+              pattern="[0-9]*"
+              placeholder="Please enter a new password"
+            />
+          </div>
+        </div>
+        <div class="weui-cell weui-cell_vcode">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">phone number</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="tel" placeholder="Please enter phone number" />
+          </div>
+          <div class="weui-cell__ft">
+            <button class="weui-vcode-btn">get verification code</button>
+          </div>
+        </div>
+        <div class="weui-cell weui-cell_vcode">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">verify code</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input
+              class="weui-input"
+              type="number"
+              placeholder="please enter verification code"
+            />
+          </div>
+          <div class="weui-cell__ft">
+            <img class="weui-vcode-img" src="./images/vcode.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="weui-btn-area">
+        <a href="javascript:;" class="weui-btn weui-btn_primary">Confirm the changes</a>
+      </div>
+    </div>
+
+    <script src="/static/lib/jquery-2.1.4.js"></script>
+    <script src="/static/lib/fastclick.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.Spinner.js"></script>
+    <script>
+      $(function() {
+        FastClick.attach(document.body);
+      });
+    </script>
+
+    <script src="/static/js/jquery-weui.js"></script>
+  </body>
+</html>

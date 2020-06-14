@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>product list</title>
+{% endblock %}
+{% block container %}
+<!--top search-->
+<header class='weui-header fixed-top'>
+  <div class="weui-search-bar" id="searchBar">
+    <form class="weui-search-bar__form" method="get" action=".">
+      <div class="weui-search-bar__box">
+        <i class="weui-icon-search"></i>
+        <input type="search" class="weui-search-bar__input"
+               id="searchInput"
+               name="name"
+               placeholder="Search for the product you want" required>
+        <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+      </div>
+      <label class="weui-search-bar__label" id="searchText" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">
+        <i class="weui-icon-search"></i>
+        <span>Search for the product you want</span>
+      </label>
+    </form>
+    <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">cancel</a>
+  </div>
+  <div class="pro-sort">
+    <div class="weui-flex">
+      <div class="weui-flex__item"><div class="placeholder NormalCss">Comprehensive</div></div>
+      <div class="weui-flex__item"><div class="placeholder SortAscCss">By sales</div></div>
+      <div class="weui-flex__item"><div class="placeholder SortDescCss">By price</div></div></div>
+    </div>
+  </div>
+</header>
+<!--main body-->
+<div class="weui-content" style="padding-top:85px;">
+  <!--Product list-sliding load-->
+  <div class="weui-pull-to-refresh__layer">
+    <div class='weui-pull-to-refresh__arrow'></div>
+    <div class='weui-pull-to-refresh__preloader'></div>
+    <div class="down">Pull down to refresh</div>
+    <div class="up">Release refresh</div>
+    <div class="refresh">Refreshing</div>
+  </div>
+  <div id="list" class='demos-content-padded proListWrap'>
+
+  </div>
+  <div class="weui-loadmore" id="loading">
+    <i class="weui-loading"></i>
+    <span class="weui-loadmore__tips">loading</span>
+  </div>
+ 
+  
+</div>
+
+{% endblock %}
+{% block footer %}
+<script>
+    var loading = false;  // loading or not
+    var page = 1; // current page
+    var noMore = false; // Is there a next page
+    /**
+     * Encapsulate function, fetch data asynchronously
+     * @param callback
+     */
+    function loadData(callback) {
+        if(loading) return;
+        if(noMore) return;
+        loading = true;
+        $('#loading').show();
+        $.ajax({
+            url: '{% url 'mall:product_load_list' %}',
+            data: {
+                page: page,
+                name: "{{ params.name|default_if_none:'' }}",
+                cls: "{{ params.cls|default_if_none:'' }}",
+                tag: "{{ params.tag|default_if_none:'' }}"
+            },
+            success: function(rest) {
+                // Add HTML fragments to the content area
+                $('#list').append(rest);
+                page++;  // Page number plus 1
+                loading = false;
+                $('#loading').hide()
+                // If there is a callback function, then call
+                if (callback) {
+                    callback()
+                }
+            }
+        })
+    }
+      $(document.body).pullToRefresh().on("pull-to-refresh", function() {
+          $("#list").empty();
+          page = 1;
+          noMore = false;
+          loadData(function () {
+              $(document.body).pullToRefreshDone();
+          })
+      });
+      // infinite
+
+      $(document.body).infinite(200).on("infinite", function() {
+        loadData(); // Download Data
+      });
+      loadData();//The first page is loaded by default
+</script>
+{% endblock %}

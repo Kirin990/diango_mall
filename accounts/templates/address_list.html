@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>Address management</title>
+{% endblock %}
+{% block container %}
+<!--main body-->
+<header class="wy-header">
+  <div class="wy-header-icon-back"><span></span></div>
+  <div class="wy-header-title">Address management</div>
+</header>
+<div class="weui-content">
+  <div class="weui-panel address-box">
+    {% for item in my_addr_list %}
+    <div class="weui-panel__bd">
+      <div class="weui-media-box weui-media-box_text address-list-box">
+        <a href="{% url 'accounts:address_edit' item.id %}" class="address-edit"></a>
+        <h4 class="weui-media-box__title">
+            <span>{{ item.username }}</span>
+            <span>{{ item.get_phone_format }}</span>
+        </h4>
+        <p class="weui-media-box__desc address-txt">
+            {{ item.get_regin_format }}
+            {{ item.address }}
+        </p>
+        {% if item.is_default %}
+          <span class="default-add">default address</span>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+
+    
+  </div>
+  <div class="weui-btn-area">
+    <a class="weui-btn weui-btn_primary"
+       href="{% url 'accounts:address_edit' 'add' %}" id="showTooltips">Add shipping address</a>
+  </div>
+</div>
+{% endblock %}

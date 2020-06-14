@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% block title %}
+<title>edit address</title>
+{% endblock %}
+{% block container %}
+    <!--main body-->
+    <header class="wy-header">
+      <div class="wy-header-icon-back"><span></span></div>
+      <div class="wy-header-title">edit address</div>
+    </header>
+    <form class="weui-content" method="post" action=".">
+      <div class="weui-cells weui-cells_form wy-address-edit">
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">receiver</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input
+              class="weui-input"
+              name="username"
+              type="text"
+              value="{{ form.username.value|default_if_none:'' }}"
+              placeholder="Please enter the recipient"
+            />
+          </div>
+        </div>
+          {{ form.username.errors }}
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">phone number</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input
+              class="weui-input"
+              type="text"
+              name="phone"
+              value="{{ form.phone.value|default_if_none:'' }}"
+              placeholder="Please enter the phone number"
+            />
+          </div>
+        </div>
+          {{ form.phone.errors }}
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label for="name" class="weui-label wy-lab">area</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input
+              class="weui-input"
+              id="address"
+              type="text"
+              name="region"
+              value="{{ form.region.value|default_if_none:'' }}"
+              readonly=""
+            />
+          </div>
+        </div>
+          {{ form.region.errors }}
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">address detail</label>
+          </div>
+          <div class="weui-cell__bd">
+            <textarea
+              class="weui-textarea"
+              name="address"
+              placeholder="Please enter detailed address"
+            >{{ form.address.value|default_if_none:'' }}</textarea>
+          </div>
+        </div>
+          {{ form.address.errors }}
+          {{ form.non_field_errors }}
+        <div class="weui-cell weui-cell_switch">
+          <div class="weui-cell__bd">set as the default address</div>
+          <div class="weui-cell__ft">
+              {{ form.is_default }}
+          </div>
+        </div>
+      </div>
+      <div class="weui-btn-area">
+          <input class="weui-btn weui-btn_primary" type="submit" value="Save this address">
+        <a href="javascript:;" id="id_delete_addr" class="weui-btn weui-btn_warn">Delete this address</a>
+      </div>
+    </form>
+
+{% endblock %}
+{% block footer %}
+<script src="/static/js/city-picker.js"></script>
+<script>
+  $('#address').cityPicker({
+    title: 'Choose a place of departure',
+    onChange: function(picker, values, displayValues) {
+      console.log(values, displayValues);
+    }
+  });
+  $("#id_delete_addr").click(function() {
+      {# Frame confirmation #}
+      if(window.confirm('Are you sure you want to delete this address')){
+          {# jquery ajax #}
+          $.post("{% url 'accounts:address_delete' form.instance.id %}", function(rest) {
+            if(rest === 'ok') {
+                window.location.href = "{% url 'accounts:address_list' %}";
+            }
+          })
+      }
+  })
+</script>
+{% endblock %}

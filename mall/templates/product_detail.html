@@ -1,0 +1,630 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>{{ prod_obj.name }}</title>
+{% endblock %}
+{% block container %}
+    <!--主体-->
+    <div class="weui-content">
+        <!--产品详情-->
+        <div class="weui-tab">
+            <div
+                    class="weui-navbar proinfo-tab-menu"
+                    style=""
+            >
+                <a
+                        class="weui-navbar__item proinfo-tab-tit weui-bar__item--on"
+                        href="#tab1"
+                >product</a
+                >
+                <a class="weui-navbar__item proinfo-tab-tit" href="#tab2">detail</a>
+                <a class="weui-navbar__item proinfo-tab-tit" href="#tab3">comments</a>
+            </div>
+            <div class="weui-tab__bd proinfo-tab-con">
+                <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                    <!--主图轮播-->
+                    <div class="swiper-container swiper-zhutu">
+                        <div class="swiper-wrapper">
+                            {% for banner in prod_obj.banners.all %}
+                                <div class="swiper-slide">
+                                    <img src="{{ banner.img.url }}"/>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-pagination swiper-zhutu-pagination"></div>
+                    </div>
+                    <div class="wy-media-box-nomg weui-media-box_text">
+                        <h4 class="wy-media-box__title">
+                            {{ prod_obj.name }}
+                        </h4>
+                        <div class="wy-pro-pri mg-tb-5">
+                            ¥<em class="num font-20">{{ prod_obj.price }}</em>
+                        </div>
+                        <p class="weui-media-box__desc">
+                            {{ prod_obj.desc }}
+                        </p>
+                    </div>
+                    <!--<div class="wy-media-box2 weui-media-box_text">-->
+                    <!--<div class="weui-media-box_appmsg">-->
+                    <!--<div class="weui-media-box__hd proinfo-txt-l">-->
+                    <!--<span class="promotion-label-tit">优惠</span>-->
+                    <!--</div>-->
+                    <!--<div class="weui-media-box__bd">-->
+                    <!--<div class="promotion-message clear">-->
+                    <!--<i class="yhq"><span class="label-text">优惠券</span></i>-->
+                    <!--<span class="promotion-item-text">满197.00减40.00</span>-->
+                    <!--</div>-->
+                    <!--<div class="promotion-message clear">-->
+                    <!--<i class="yhq"><span class="label-text">优惠券</span></i>-->
+                    <!--<span class="promotion-item-text">满197.00减40.00</span>-->
+                    <!--</div>-->
+                    <!--<div class="yhq-btn clear">-->
+                    <!--<a href="yhq_list.html">去领券</a>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--</div>-->
+                    <!--
+                      <div class="wy-media-box2 weui-media-box_text">
+                        <div class="weui-media-box_appmsg">
+                          <div>
+                            <span>请选择购买数量</span>
+                          </div>
+                          <div class="weui-media-box__bd">
+                            <div class="promotion-sku clear">
+                              <ul>
+                                <li><a href="javascript:;">1</a></li>
+                                <li><a href="javascript:;">3</a></li>
+                                <li><a href="javascript:;">5</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="weui-media-box_appmsg">
+                          <div class="weui-media-box__hd proinfo-txt-l">
+                            <span class="promotion-label-tit">颜色</span>
+                          </div>
+                          <div class="weui-media-box__bd">
+                            <div class="promotion-sku clear">
+                              <ul>
+                                <li><a href="javascript:;">黑色</a></li>
+                                <li><a href="javascript:;">红色</a></li>
+                                <li><a href="javascript:;">白色</a></li>
+                                <li><a href="javascript:;">蓝色</a></li>
+                                <li><a href="javascript:;">橘黄色</a></li>
+                                <li><a href="javascript:;">绿色</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div> -->
+                </div>
+                <div class="wy-media-box2 txtpd weui-media-box_text">
+                    <div class="weui-media-box_appmsg">
+                        <div class="weui-media-box__hd proinfo-txt-l">
+                            <span class="promotion-label-tit">supply to</span>
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <div class="promotion-message clear">
+                    <span class="promotion-item-text">
+                        {{ default_addr.get_region_format }}
+                    </span>
+                                <span class="promotion-item-text">{{ default_addr.address }}</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-media-box_appmsg">
+                        <div class="weui-media-box__hd proinfo-txt-l">
+                            <span class="promotion-label-tit">delivery fee</span>
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <div class="promotion-message clear">
+                    <span class="promotion-item-text"
+                    >free delivery<!--<div class="wy-pro-pri">¥<span class="num">11.00</span></div>--></span
+                    >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-media-box_appmsg">
+                        <div class="weui-media-box__hd proinfo-txt-l">
+                            <span class="promotion-label-tit">Merchant</span>
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <div class="promotion-message clear">
+                                <span class="promotion-item-text">Official self-employed</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weui-media-box_appmsg">
+                        <div class="weui-media-box__hd proinfo-txt-l">
+                            <span class="promotion-label-tit">prompt</span>
+                        </div>
+                        <div class="weui-media-box__bd">
+                            <div class="promotion-message clear">
+                    <span class="promotion-item-text"
+                    ><p class="txt-color-ml">7 days no reason to return</p></span
+                    >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tab2" class="weui-tab__bd-item ">
+                <div class="pro-detail">
+                    {{ prod_obj.content|safe }}
+                </div>
+            </div>
+            <div id="tab3" class="weui-tab__bd-item">
+                <!--评价-->
+                <div class="weui-panel__bd">
+                    <div class="wy-media-box weui-media-box_text">
+                        <div class="weui-cell nopd weui-cell_access">
+                            <div class="weui-cell__hd">
+                                <img
+                                        src="upload/headimg.jpg"
+                                        alt=""
+                                        style="width:20px;margin-right:5px;display:block"
+                                />
+                            </div>
+                            <div class="weui-cell__bd weui-cell_primary">
+                                <p>John129721</p>
+                            </div>
+                            <span class="weui-cell__time">2017-02-06</span>
+                        </div>
+                        <div class="comment-item-star">
+                            <span class="real-star comment-stars-width5"></span>
+                        </div>
+                        <p class="weui-media-box__desc">
+                            Nice shades but I have bought those lipsticks before and they really dry out my lips. After
+                            trying Bobbie Brown - average experience as well and Charlotte Tirburry matte lipstick which
+                            are great colours and they stay and they are not drying out your lips!
+                        </p>
+                        <ul class="weui-uploader__files clear mg-com-img">
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="weui-panel__bd">
+                    <div class="wy-media-box weui-media-box_text">
+                        <div class="weui-cell nopd weui-cell_access">
+                            <div class="weui-cell__hd">
+                                <img
+                                        src="upload/headimg.jpg"
+                                        alt=""
+                                        style="width:20px;margin-right:5px;display:block"
+                                />
+                            </div>
+                            <div class="weui-cell__bd weui-cell_primary">
+                                <p>Lily7912</p>
+                            </div>
+                            <span class="weui-cell__time">2017-02-06</span>
+                        </div>
+                        <div class="comment-item-star">
+                            <span class="real-star comment-stars-width3"></span>
+                        </div>
+                        <p class="weui-media-box__desc">
+                            Perfect handbag sized versions of my favourite lippie shade Mac "Mehr" and delighted to try
+                            out the other two lovely colours also. Super fast delivery. Really happy with this site!
+                        </p>
+                        <ul class="weui-uploader__files clear mg-com-img">
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="weui-panel__bd">
+                    <div class="wy-media-box weui-media-box_text">
+                        <div class="weui-cell nopd weui-cell_access">
+                            <div class="weui-cell__hd">
+                                <img
+                                        src="upload/headimg.jpg"
+                                        alt=""
+                                        style="width:20px;margin-right:5px;display:block"
+                                />
+                            </div>
+                            <div class="weui-cell__bd weui-cell_primary">
+                                <p>Christina27323</p>
+                            </div>
+                            <span class="weui-cell__time">2017-02-06</span>
+                        </div>
+                        <div class="comment-item-star">
+                            <span class="real-star comment-stars-width3"></span>
+                        </div>
+                        <p class="weui-media-box__desc">
+                            Thank you, Lipsticks are nice and came fast!。
+                        </p>
+                        <ul class="weui-uploader__files clear mg-com-img">
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="weui-panel__bd">
+                    <div class="wy-media-box weui-media-box_text">
+                        <div class="weui-cell nopd weui-cell_access">
+                            <div class="weui-cell__hd">
+                                <img
+                                        src="upload/headimg.jpg"
+                                        alt=""
+                                        style="width:20px;margin-right:5px;display:block"
+                                />
+                            </div>
+                            <div class="weui-cell__bd weui-cell_primary">
+                                <p>Mel
+                                </p>
+                            </div>
+                            <span class="weui-cell__time">2017-02-06</span>
+                        </div>
+                        <div class="comment-item-star">
+                            <span class="real-star comment-stars-width3"></span>
+                        </div>
+                        <p class="weui-media-box__desc">
+                            These shades are darker than the picture shown.
+                        </p>
+                        <ul class="weui-uploader__files clear mg-com-img">
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                                    onclick="window.location.reload('gallery.html')"
+                            ></li>
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                                    onclick="window.location.reload('gallery.html')"
+                            ></li>
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                                    onclick="window.location.reload('gallery.html')"
+                            ></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="weui-panel__bd">
+                    <div class="wy-media-box weui-media-box_text">
+                        <div class="weui-cell nopd weui-cell_access">
+                            <div class="weui-cell__hd">
+                                <img
+                                        src="upload/headimg.jpg"
+                                        alt=""
+                                        style="width:20px;margin-right:5px;display:block"
+                                />
+                            </div>
+                            <div class="weui-cell__bd weui-cell_primary">
+                                <p>Irenaeva294
+                                </p>
+                            </div>
+                            <span class="weui-cell__time">2019-02-06</span>
+                        </div>
+                        <div class="comment-item-star">
+                            <span class="real-star comment-stars-width3"></span>
+                        </div>
+                        <p class="weui-media-box__desc">
+                          These lipsticks are so dark, they are not nude shades. Very disappointed.
+                        </p>
+                        <ul class="weui-uploader__files clear mg-com-img">
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                            <li
+                                    class="weui-uploader__file"
+                                    style="background-image:url(/medias/202005/product/demo1.jpg)"
+                            ></li>
+                        </ul>
+                    </div>
+                </div>
+                <a
+                        href="javascript:void(0);"
+                        class="weui-cell weui-cell_access weui-cell_link list-more"
+                >
+                    <div class="weui-cell__bd">search more</div>
+                    <span class="weui-cell__ft"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+    </div>
+    <span id="tophovertree" title="return to the top"></span>
+    <!--底部导航-->
+    <div class="foot-black"></div>
+    <div class="weui-tabbar wy-foot-menu">
+        <a href="javascript:;" class="promotion-foot-menu-items">
+            <div class="weui-tabbar__icon promotion-foot-menu-kefu"></div>
+            <p class="weui-tabbar__label">Customer service</p>
+        </a>
+        <a href="javascript:;" id="show-toast" class="promotion-foot-menu-items">
+            <div class="weui-tabbar__icon promotion-foot-menu-collection"></div>
+            <p class="weui-tabbar__label">collect</p>
+        </a>
+        <a href="{% url 'mine:cart' %}" class="promotion-foot-menu-items">
+            {% if cart_count > 0 %}
+                <span
+                        class="weui-badge"
+                        style="position: absolute;top: -.4em;right: 1em;"
+                >{{ cart_count }}</span>
+            {% endif %}
+            <div class="weui-tabbar__icon promotion-foot-menu-cart"></div>
+            <p class="weui-tabbar__label">shopping cart</p>
+        </a>
+        <a
+                href="javascript:;"
+                id="id_add_cart"
+                class="weui-tabbar__item yellow-color open-popup"
+                data-target="#join_cart"
+        >
+            <p class="promotion-foot-menu-label">add to shooping cart</p>
+        </a>
+        <a
+                href="javascript:;"
+                class="weui-tabbar__item red-color open-popup"
+                data-target="#selcet_sku"
+        >
+            <p class="promotion-foot-menu-label">Buy immediately</p>
+        </a>
+    </div>
+    <div
+            id="join_cart"
+            class="weui-popup__container popup-bottom"
+            style="z-index:600;"
+    >
+        <div class="weui-popup__overlay" style="opacity:1;"></div>
+        <div class="weui-popup__modal">
+            <div class="modal-content">
+                <div class="weui-msg" style="padding-top:0;">
+                    <div class="weui-msg__icon-area">
+                        <i class="weui-icon-success weui-icon_msg"></i>
+                    </div>
+                    <div class="weui-msg__text-area">
+                        <h2 class="weui-msg__title">Successfully added to cart</h2>
+                        <p class="weui-msg__desc">
+                            Dear user, your products have been successfully added to the shopping cart. In order to ensure that your products are delivered quickly, please settle in the shopping cart as soon as possible.
+                        </p>
+                    </div>
+                    <div class="weui-msg__opr-area">
+                        <p class="weui-btn-area">
+                            <a href="./static/./static/templates/shopcart.html" class="weui-btn weui-btn_primary"
+                            >Go to cart to settle</a
+                            >
+                            <a
+                                    href="javascript:;"
+                                    class="weui-btn weui-btn_default close-popup"
+                            >No I want to look again</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div
+            id="selcet_sku"
+            class="weui-popup__container popup-bottom"
+            style="z-index:600;"
+    >
+        <div class="weui-popup__overlay" style="opacity:1;"></div>
+        <div class="weui-popup__modal">
+            <div class="toolbar">
+                <div class="toolbar-inner">
+                    <a href="javascript:;" class="picker-button close-popup">close</a>
+                    <h1 class="title">Commodity attributes</h1>
+                </div>
+            </div>
+            <div class="modal-content">
+                <div class="weui-msg" style="padding-top:0;">
+                    <div class="wy-media-box2 weui-media-box_text" style="margin:0;">
+                        <div class="weui-media-box_appmsg">
+                            <div class="weui-media-box__hd proinfo-txt-l">
+                                <span class="promotion-label-tit">Purchase quantity</span>
+                            </div>
+                            <div class="weui-media-box__bd">
+                                <div class="promotion-sku clear">
+                                    <ul>
+                                        <li><a href="javascript:;">1</a></li>
+                                        <li><a href="javascript:;">3</a></li>
+                                        <li><a href="javascript:;">5</a></li>
+                                        <li><a href="javascript:;">10</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!--
+                        <div class="weui-media-box_appmsg">
+                          <div class="weui-media-box__hd proinfo-txt-l">
+                            <span class="promotion-label-tit">颜色</span>
+                          </div>
+                          <div class="weui-media-box__bd">
+                            <div class="promotion-sku clear">
+                              <ul>
+                                <li><a href="javascript:;">黑色</a></li>
+                                <li><a href="javascript:;">红色</a></li>
+                                <li><a href="javascript:;">白色</a></li>
+                                <li><a href="javascript:;">蓝色</a></li>
+                                <li><a href="javascript:;">橘黄色</a></li>
+                                <li><a href="javascript:;">绿色</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div> -->
+                    </div>
+                    <div class="weui-msg__opr-area">
+                        <p class="weui-btn-area">
+                            <a href="../../mine/templates/order_info.html" class="weui-btn weui-btn_primary"
+                            >Buy immediately</a
+                            >
+                            <a
+                                    href="javascript:;"
+                                    class="weui-btn weui-btn_default close-popup"
+                            >No I want to look again</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block footer %}
+    <script src="/static/js/swiper.js"></script>
+    <script>
+        $('.swiper-zhutu').swiper({
+            loop: true,
+            paginationType: 'fraction',
+            autoplay: 5000
+        });
+    </script>
+    <script>
+        $(function () {
+            $('.promotion-sku li').click(function () {
+                $(this)
+                    .addClass('active')
+                    .siblings('li')
+                    .removeClass('active');
+            });
+        });
+    </script>
+    <script>
+        $(document).on('click', '#show-toast', function () {
+            $.toast('Collection success', function () {
+                console.log('close');
+            });
+        });
+    </script>
+    <script>
+        $(document)
+            .on('open', '.weui-popup-modal', function () {
+                console.log('open popup');
+            })
+            .on('close', '.weui-popup-modal', function () {
+                console.log('close popup');
+            });
+    </script>
+    <script>
+        $(function () {
+            initTopHoverTree('tophov' + 'ertree', 30, 10, 10);
+        });
+    </script>
+    <script>
+        function initTopHoverTree(hvtid, times, right, bottom) {
+            $('#' + hvtid)
+                .css('right', right)
+                .css('bottmo', bottom);
+            $('#' + hvtid).on('click', function () {
+                goTopHovetree(times);
+            });
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 268) {
+                    $('#' + hvtid).fadeIn(100);
+                } else {
+                    $('#' + hvtid).fadeOut(100);
+                }
+            });
+        }
+
+        //Back to top animation
+        //goTop(500);//Roll back to the top within 500ms
+        function goTopHovetree(times) {
+            if (!!!times) {
+                $(window).scrollTop(0);
+                return;
+            }
+            var sh = $('body').scrollTop(); //Total distance moved
+            var inter = 13.333; //ms, time interval between each move
+            var forCount = Math.ceil(times / inter); //Moves
+            var stepL = Math.ceil(sh / forCount); //Moving step
+            var timeId = null;
+
+            function aniHovertree() {
+                !!timeId && clearTimeout(timeId);
+                timeId = null;
+                //console.log($('body').scrollTop());
+                if ($('body').scrollTop() <= 0 || forCount <= 0) {
+                    //The mobile terminal judges better, because the scroll event of the mobile terminal is not triggered frequently, and it may not be detected that there is <= 0
+                    $('body').scrollTop(0);
+                    return;
+                }
+                forCount--;
+                sh -= stepL;
+                $('body').scrollTop(sh);
+                timeId = setTimeout(function () {
+                    aniHovertree();
+                }, inter);
+            }
+
+            aniHovertree();
+        }
+
+        function getCookie(name) {
+            var cookieValue = null;
+            if (document.cookie && document.cookie !== '') {
+                var cookies = document.cookie.split(';');
+                for (var i = 0; i < cookies.length; i++) {
+                    var cookie = jQuery.trim(cookies[i]);
+                    // Does this cookie string begin with the name we want?
+                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                        break;
+                    }
+                }
+            }
+            return cookieValue;
+        }
+
+        var csrftoken = getCookie('csrftoken');
+
+        function csrfSafeMethod(method) {
+            // these HTTP methods do not require CSRF protection
+            return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+        }
+
+        $.ajaxSetup({
+            beforeSend: function (xhr, settings) {
+                if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken);
+                }
+            }
+        });
+        // Add to cart
+        $('#id_add_cart').click(function () {
+            $.post('{% url 'mine:cart_add' prod_obj.uid %}', {
+                count: 1
+            }, function (rest) {
+
+            })
+        })
+    </script>
+{% endblock %}

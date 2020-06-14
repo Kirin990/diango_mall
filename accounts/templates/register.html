@@ -1,0 +1,105 @@
+{%  extends 'base.html' %}
+{% block title %}
+<title>Register</title>
+{% endblock %}
+{% block container %}
+    <!--main body-->
+    <header class="wy-header">
+      <div class="wy-header-icon-back"><span></span></div>
+      <div class="wy-header-title">Register your phone</div>
+    </header>
+    <form class="weui-content" method="post" action=".">
+      <div class="weui-cells weui-cells_form wy-address-edit">
+        <div class="weui-cell weui-cell_vcode">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">phone number</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input class="weui-input" type="tel" name="username"
+                   placeholder="Please enter phone number"
+                    value="{{ form.username.value|default_if_none:''}}"/>
+          </div>
+          <div class="weui-cell__ft">
+            <button class="weui-vcode-btn">get verification code</button>
+          </div>
+        </div>
+          {{ form.username.errors }}
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">nickname</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input
+              class="weui-input"
+              type="text"
+              name="nickname"
+              value="{{ form.nickname.value|default_if_none:'' }}"
+              placeholder="Please enter a nickname"
+            />
+          </div>
+        </div>
+          {{ form.nickname.errors }}
+        <div class="weui-cell weui-cell_vcode">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">verify code</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input
+              class="weui-input"
+              name="verify_code"
+              type="text"
+              placeholder="Please enter a verification code"
+            />
+          </div>
+          <div class="weui-cell__ft">
+            <img class="weui-vcode-img" src="{% url 'system:verify_code' %}" />
+          </div>
+        </div>
+          {{ form.verify_code.errors }}
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">set password</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input
+              class="weui-input"
+              type="password"
+              name="password"
+              placeholder="Please enter a new password"
+            />
+          </div>
+        </div>
+          {{ form.password.errors }}
+        <div class="weui-cell">
+          <div class="weui-cell__hd">
+            <label class="weui-label wy-lab">confirm password</label>
+          </div>
+          <div class="weui-cell__bd">
+            <input
+              class="weui-input"
+              type="password"
+              name="password_repeat"
+              placeholder="Please enter the new password again"
+            />
+          </div>
+        </div>
+          {{ form.password_repeat.errors }}
+          {{ form.non_field_errors }}
+      </div>
+      <label for="weuiAgree" class="weui-agree">
+        <input
+          id="weuiAgree"
+          type="checkbox"
+          class="weui-agree__checkbox"
+          checked="checked"
+        />
+        <span class="weui-agree__text"
+          >Read and agree<a href="javascript:void(0);">"Registration Agreement"</a></span
+        >
+      </label>
+      <div class="weui-btn-area">
+          <input class="weui-btn weui-btn_warn" type="submit" value="Register and log in">
+      </div>
+      <div class="weui-cells__tips t-c font-12">Login account is the mobile number you entered</div>
+    </form>
+{% endblock %}

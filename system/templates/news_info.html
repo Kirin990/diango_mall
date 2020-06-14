@@ -1,0 +1,26 @@
+{%  extends 'base.html' %}
+{%  block title %}
+<title>news detail</title>
+{% endblock %}
+{% block container %}
+    <!--main body-->
+    <header class="wy-header">
+      <div class="wy-header-icon-back"><span></span></div>
+      <div class="wy-header-title">news detail</div>
+    </header>
+    <div class="weui-content">
+      <article class="weui-article">
+        <h1>{{ new_obj.title }}</h1>
+        <h3 class="wy-news-time">{{ new_obj.created_at|date }} views time: {{ new_obj.view_count }}</h3>
+        <section class="wy-news-info">
+          <p>
+            {{ new_obj.content|safe }}
+          </p>
+          <p>
+            <img src="/medias/upload/slider1.jpg" alt="" />
+            <img src="/medias/upload/slider2.jpg" alt="" />
+          </p>
+        </section>
+      </article>
+    </div>
+{% endblock %}
